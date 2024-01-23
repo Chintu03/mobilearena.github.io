@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            background: url('your-background-image.jpg') center/cover no-repeat fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 50px 0;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeInFromCursor 2.0s ease-out forwards;
+        }
+
+     
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInFromCursor {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes blinkCursor {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi! I'm Ronak</h1>
+        <p>Unlike most students I still don't know what to do.</p>
+        <div class="button-container">
+            <a href="https://www.linkedin.com/in/ronak-mishra-564a92240/" class="cta-button" target="_blank">Linkedin</a>
+            <a href="" class="cta-button" target="_blank">CV</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="cta-button" target="_blank">Youtube</a>
+        </div>
+    </header>
+
+    <!-- Add more sections/content here -->
+
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const h1 = document.querySelector('h1');
+            h1.style.animation = 'none';
+            h1.offsetHeight; /* trigger reflow */
+            h1.style.animation = null;
+        });
+    </script>
+</body>
+</html>
